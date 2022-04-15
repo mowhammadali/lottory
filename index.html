@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Lottory</title>
+</head>
+<body>
+    <div id="container">
+        <div class="control-section">
+            <div class="user-input-area">
+                <input class="user-input" type="text" placeholder="نام شرکت کننده را وارد کنید">
+                <span class="user-input-message"></span>
+            </div>
+            <div class="add-delete-area">
+                <button class="add-btn" type="button">اضافه کردن</button>
+                <button class="delete-btn" type="button">حذف کردن</button>
+            </div>
+            <div class="start-area">
+                <button class="manual-start-btn" type="button">قرعه کشی دستی</button>
+                <button class="auto-start-btn" type="button">قرعه کشی اتوماتیک</button>
+                <span class="check-start"></span>
+            </div>
+            <div class="timer-area">
+                <span class="timer">10</span>
+            </div>
+        </div>
+        <div class="participants-section">
+            <select id="participants"><option value="parti" class="participant">جهت مشاهده شرکت کنندگان اینجا کلیک کنید</option></select>
+            <span class="participant-message"></span>
+        </div>
+        <div class="winners-section">
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

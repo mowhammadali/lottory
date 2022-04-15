@@ -1,0 +1,401 @@
+@font-face {
+    font-family: vazir;
+    src: url('./fonts/Vazir.eot') format('eot');
+    src: url('./fonts/Vazir.woff') format('woff');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: vazir;
+}
+
+html {
+    direction: rtl;
+}
+
+body {
+    background: linear-gradient(#242222cc, #1b1919e6), url("./assets/4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+#container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+    /* CONTROL SECTION */
+
+.control-section {
+    height: auto;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    margin: 60px 0 40px 0px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.063);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+}
+
+.control-section .user-input-area {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-input-area .user-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 25px;
+    margin-bottom: 6px;
+    font-size: 22px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.user-input-area .user-input-message{
+    margin-right: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 55px;
+    color: #1e974d;
+}
+
+.control-section .add-delete-area,
+.control-section .start-area
+{
+    margin-bottom: 30px;
+}
+
+.control-section .add-delete-area,
+.control-section .start-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control-section .start-area{
+    position: relative;
+}
+
+.add-delete-area .add-btn,
+.add-delete-area .delete-btn,
+.start-area .manual-start-btn,
+.start-area .auto-start-btn {
+    width: 46%;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.start-area .manual-start-btn {
+    color: #ce1414;
+}
+
+.start-area .auto-start-btn {
+    color: #1e974d;
+}
+
+.add-delete-area .add-btn:hover,
+.add-delete-area .delete-btn:hover,
+.start-area .manual-start-btn:hover,
+.start-area .auto-start-btn:hover {
+    opacity: .6;
+}
+
+.start-area .check-start{
+    color: #0c80b6;
+    position: absolute;
+    font-size: 14px;
+    top: 57px;
+    right: 50%;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+
+.timer-area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    font-size: 26px;
+    color: #ffffff;
+}
+
+
+
+@media (max-width:992px) and (min-width:768px) {
+
+    .control-section {
+        width: 500px;
+    }
+
+    .add-delete-area .add-btn,
+    .add-delete-area .delete-btn,
+    .start-area .manual-start-btn,
+    .start-area .auto-start-btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:768px) and (min-width:450px) {
+
+    .control-section {
+        width: 400px;
+    }
+
+    .user-input-area .user-input::placeholder{
+        font-size: 16px;
+    }
+
+    .add-delete-area .add-btn,
+    .add-delete-area .delete-btn,
+    .start-area .manual-start-btn,
+    .start-area .auto-start-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:450px) {
+    .control-section {
+        width: 88%;
+        padding: 40px 20px;
+    }
+
+    .user-input-area .user-input{
+        font-size: 18px;
+    }
+
+    .user-input-area .user-input::placeholder{
+        font-size: 14px;
+    }
+
+    .control-section .add-delete-area,
+    .control-section .start-area {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .add-delete-area .add-btn,
+    .add-delete-area .delete-btn,
+    .start-area .manual-start-btn,
+    .start-area .auto-start-btn{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .start-area .check-start{
+        top: 140px;
+    }
+
+    .timer{
+        font-size: 22px;
+    }
+}
+
+
+    /* PARTICIPANTS SECTION */
+
+
+.participants-section{
+    width: 400px;
+    height: 40px;
+    margin-bottom: 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.participants-section #participants{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    appearance: none;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: rgb(134, 235, 213);
+    color: #000000;
+}
+
+.participants-section #participants:hover{
+    opacity: .7;
+}
+
+.participants-section .participant-message{
+    font-size: 14px;
+    position: absolute;
+    top: 45px;
+    color: #fff;
+}
+
+
+@media (max-width:768px) and (min-width:450px) {
+
+    .participants-section{
+        width: 300px;
+    }
+
+    .participants-section #participants{
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width:450px){
+
+    .participants-section{
+        width: 280px;
+    }
+
+    .participants-section #participants{
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+
+    /* WINNERS SECTION */
+
+
+
+.winners-section{
+    min-width: 20%;
+    margin-bottom: 70px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.winners-section .delete-all{
+    width: 180px;
+    height: 60px;
+}
+
+.delete-all .delete-all-btn{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background-color: #1c5d68;
+}
+
+.delete-all .delete-all-btn:hover{
+    opacity: .8;
+}
+
+.winners-section .winner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #2b7bb1;
+}
+
+.winner .delete-winner{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #b3180d;
+}
+
+.winner .delete-winner:hover{
+    background-color: #e22a1d;
+}
+
+.delete-winner i{
+    font-size: 20px;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.winner .winner-name{
+    height: 40px;
+    width: calc(100% - 40px);
+    padding: 0px 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+@media (max-width:768px) and (min-width:450px){
+
+    .winner .winner-name{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:450px){
+
+    .winners-section .delete-all{
+        width: 150px;
+        height: 60px;
+    }
+
+    .delete-all .delete-all-btn{
+        font-size: 16px;
+    }
+
+    .winner .delete-winner{
+        width: 30px;
+        height: 30px;
+    }
+
+    .delete-winner i{
+        font-size: 15px;
+    }
+
+    .winner .winner-name{
+        height: 30px;
+        width: calc(100% - 30px);
+        font-size: 13px;
+    }
+
+}
